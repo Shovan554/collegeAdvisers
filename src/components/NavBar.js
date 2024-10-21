@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo"; // Import the Logo component
 import "../styles/navbar.css"; // Import your CSS
@@ -9,6 +9,15 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const navbar = document.querySelector(".navbar");
+    if (navbar) {
+      setTimeout(() => {
+        navbar.classList.add("slide-down"); // Add the slide-down class on mount
+      }, 100); // Delay slightly to ensure smooth entry
+    }
+  }, []);
 
   return (
     <nav className="navbar">
@@ -40,10 +49,10 @@ const Navbar = () => {
           Home
         </Link>
         <Link to="/about" className="navbar-link">
-         About us
+          About us
         </Link>
         <Link to="/services" className="navbar-link">
-         Our Services
+          Our Services
         </Link>
         <Link to="/resources" className="navbar-link">
           Resources
@@ -51,7 +60,6 @@ const Navbar = () => {
         <Link to="/blog" className="navbar-link">
           Blog
         </Link>
-        
         <Link to="/contact" className="navbar-link">
           Contact Us
         </Link>

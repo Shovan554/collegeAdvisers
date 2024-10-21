@@ -1,0 +1,19 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out, scale 0.5s ease-out; /* Smooth transition */
+}
+
+/* Burst effect when the loading screen exits */
+.loading-container.burst {
+    transform: scale(3); /* Quickly expands */
+    opacity: 0; /* Fade out */
+}

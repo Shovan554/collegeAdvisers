@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    const footer = document.querySelector(".footer");
+    if (footer) {
+      setTimeout(() => {
+        footer.classList.add("slide-up"); // Add the slide-up class on mount
+      }, 100); // Delay slightly to ensure smooth entry
+    }
+  }, []);
 
   return (
     <footer className="footer">
@@ -13,7 +22,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="footer-right">
-        &copy; {currentYear}
+        &copy; {currentYear} College Advisers
       </div>
     </footer>
   );

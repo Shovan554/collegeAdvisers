@@ -8,24 +8,30 @@
     color: #ffffff;
     width: 100%;
     position: fixed; /* Fix at the bottom */
-    bottom: 0;
+    bottom: -100px; /* Initially off-screen */
     left: 0;
     z-index: 1000;
     font-size: 14px;
-  }
-  
-  /* Left Side of the Footer */
-  .footer-left a {
+    transition: bottom 0.6s ease-out; /* Smooth slide transition */
+}
+
+/* Add this class to trigger slide up */
+.footer.slide-up {
+    bottom: 0; /* Slide up to its normal position */
+}
+
+/* Left Side of the Footer */
+.footer-left a {
     color: #4e18fd; /* Color for the link */
     text-decoration: none;
-  }
-  
-  .footer-left a:hover {
+}
+
+.footer-left a:hover {
     text-decoration: underline; /* Add underline on hover */
-  }
-  
-  /* Right Side of the Footer */
-  .footer-right {
+}
+
+/* Right Side of the Footer */
+.footer-right {
     font-size: 14px;
-    padding-right:20px;
-  }
+    padding-right: 20px;
+}

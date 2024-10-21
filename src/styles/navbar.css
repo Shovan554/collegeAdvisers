@@ -3,15 +3,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px ; /* Adjusted padding to fit better */
+  padding: 10px; /* Adjusted padding to fit better */
   background-color: #000000;
   width: 100%;
   position: fixed; /* Make it stick to the top */
-  top: 0;
+  top: -100px; /* Initially off-screen */
   left: 0;
   z-index: 1000; /* Ensure it stays on top */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add slight shadow */
+  transition: top 0.6s ease-out; /* Smooth slide transition */
+}
 
+/* Add this class to trigger slide down */
+.navbar.slide-down {
+  top: 0; /* Slide down to its normal position */
 }
 
 /* Logo and Title Container */
@@ -38,7 +43,6 @@
   display: flex;
   gap: 25px;
   padding-right: 20px; /* Added padding to create space after the last item */
-
 }
 
 /* Individual Link Styling */

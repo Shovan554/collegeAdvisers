@@ -1,16 +1,17 @@
-@font-face {
-    font-family: 'LuckiestGuy';
-    src: url('../assets/fonts/LuckiestGuy-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  /* Container for the Home Page */
-  .home-container {
+/* Container for the Home Page */
+.home-container {
     display: flex;
     flex-direction: column;
     padding: 20px;
     background-color: #ffffff;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Slide from the right */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .home-container.slide-in {
+    opacity: 1;
+    transform: translateX(0); /* Slide to the original position */
   }
   
   /* Full-Width Logo and Animation Section */
@@ -73,11 +74,13 @@
   }
   
   /* General Content Sections Styling */
-  .content-section {
+  /* General Content Sections Styling */
+.content-section {
     padding: 30px;
     background-color: #ffffff;
     border-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 5px 10px 5px rgba(136, 81, 81, 0.1);
+    border: 0.1px solid #ffffff; /* Add a black border */
     width: 45%;
     text-align: left;
     display: flex;
@@ -85,35 +88,30 @@
     justify-content: space-between;
     min-height: 400px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     opacity: 0; /* Initially hidden */
     transform: translateY(30px); /* Move down initially */
-    transition: opacity 2.5s ease-out, transform 2.5s ease-out; /* Slower transition */
-  }
-  
-  /* Fade-in animation */
-  .content-section.visible {
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out; /* Add transition */
+    margin-bottom: 40px;
+}
+
+/* Hover Effect for .content-section */
+.content-section:hover {
+    transform: scale(1.5); /* Scale up on hover */
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6); /* Increase shadow for a popping effect */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for hover effect */
+}
+
+/* Fade-in animation */
+.content-section.visible {
     opacity: 1;
     transform: translateY(0); /* Moves to original position */
-  }
-  
-  /* Font for All Text in Sections */
-  .content-section p, .content-section h2 {
-    font-size: 20px;
-    color: #333;
-    line-height: 1.5;
-    margin-bottom: 15px;
-  }
-  
-  /* Subheading Styling */
-  .content-section h2 {
-    font-size: 25px; /* Increased size for subtopics */
-    font-weight: bold; /* Make subtopics bold */
-  }
+}
   
   /* Buttons */
   .home-button {
     padding: 12px 18px;
-    font-size: 16px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
     border-radius: 50px;

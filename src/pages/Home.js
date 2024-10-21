@@ -1,23 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../components/Logo";
 import Lottie from "lottie-react";
 import homeScreenAnimation from "../assets/animations/homeScreenAnimation.json";
 import "../styles/home.css";
 
 const Home = () => {
+  const [slideIn, setSlideIn] = useState(false);
+
   useEffect(() => {
+    // Trigger the slide-in effect when the Home component mounts
+    setTimeout(() => {
+      setSlideIn(true);
+    }, 100); // Adjust timing if needed
+
+    // Scroll effect for content sections
     const handleScroll = () => {
       const contentSections = document.querySelectorAll(".content-section");
-      contentSections.forEach(section => {
+      contentSections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
         const sectionBottom = section.getBoundingClientRect().bottom;
         const windowHeight = window.innerHeight;
 
-        // Add 'visible' class when the section is in view
         if (sectionTop < windowHeight - 100 && sectionBottom > 100) {
           section.classList.add("visible");
         } else {
-          // Remove 'visible' class when the section is out of view
           section.classList.remove("visible");
         }
       });
@@ -30,15 +36,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-container">
-      {/* Full-width Logo and Animation Section */}
+    <div className={`home-container ${slideIn ? "slide-in" : ""}`}>
       <section className="home-top">
         <div className="home-left">
           <div className="home-logo">
             <Logo />
           </div>
           <p className="home-quote">
-            <strong>Helping you achieve your study abroad dream.</strong> <br />We provide guidance, support, and resources to turn your dreams into reality.
+            <strong>Helping you achieve your study abroad dream.</strong> <br />
+            We provide guidance, support, and resources to turn your dreams into reality.
           </p>
         </div>
         <div className="home-right">
@@ -46,7 +52,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Horizontal Container for Content Sections */}
       <div className="content-wrapper">
         <section className="content-section">
           <h2>Personalized Guidance for Your Educational Journey</h2>
