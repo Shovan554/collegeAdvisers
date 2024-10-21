@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'LuckiestGuy';
+    src: url('../assets/fonts/LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Container for the Home Page */
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  /* Full-Width Logo and Animation Section */
+  .home-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 800px;
+  }
+  
+  /* Left Section Styling */
+  .home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 50%;
+  }
+  
+  .home-logo .logo-container {
+    transform: scale(2.3);
+    padding-left: 100px;
+  }
+  
+  .home-logo .logo-college {
+    color: #000000 !important;
+  }
+  
+  .home-quote {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.5;
+    padding-left: 160px;
+  }
+  
+  /* Right Section Styling */
+  .home-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+  }
+  
+  .home-right .lottie-animation {
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Wrapper for Side-by-Side Content Sections */
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  /* General Content Sections Styling */
+  .content-section {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Move down initially */
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out; /* Slower transition */
+  }
+  
+  /* Fade-in animation */
+  .content-section.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves to original position */
+  }
+  
+  /* Font for All Text in Sections */
+  .content-section p, .content-section h2 {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  /* Subheading Styling */
+  .content-section h2 {
+    font-size: 25px; /* Increased size for subtopics */
+    font-weight: bold; /* Make subtopics bold */
+  }
+  
+  /* Buttons */
+  .home-button {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    align-self: center;
+    background-color: #4e18fd;
+    color: #fff;
+    margin-top: 15px;
+    width: auto;
+  }
+  
+  .home-button:hover {
+    background-color: #3713b2;
+  }

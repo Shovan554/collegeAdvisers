@@ -1,0 +1,94 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px ; /* Adjusted padding to fit better */
+  background-color: #000000;
+  width: 100%;
+  position: fixed; /* Make it stick to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add slight shadow */
+
+}
+
+/* Logo and Title Container */
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+/* Title Styling */
+.navbar-title {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Links Container */
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  padding-right: 20px; /* Added padding to create space after the last item */
+
+}
+
+/* Individual Link Styling */
+.navbar-link {
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: #E5E7EB;
+}
+
+/* Menu Icon Styling for Mobile */
+.navbar-menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* Responsive Styling for Mobile Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px; /* Reduce padding for smaller screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    background-color: #000000;
+    position: absolute;
+    top: 60px; /* Adjust to place dropdown below navbar */
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+  }
+
+  .navbar-links.block {
+    display: flex; /* Show links when menu is toggled */
+  }
+
+  .navbar-menu-icon {
+    display: block; /* Show hamburger icon on mobile */
+  }
+}
