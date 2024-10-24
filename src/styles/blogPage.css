@@ -1,0 +1,16 @@
+.blog-page {
+    padding-top: 120px; /* Ensure sufficient space from the navbar */
+    padding-bottom: 40px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the cards on the page */
+  }
+  
+  .blog-cards-container {
+    width: 80%; /* Ensure the container is consistent with the card width */
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 20px; /* Space between each card */
+  }

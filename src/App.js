@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import BlogPage from "./pages/BlogPage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
@@ -29,6 +30,8 @@ function App() {
           <div className={`home-wrapper ${slideIn ? "slide-in" : ""}`}>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/blog" element={<BlogPage />} /> {/* Add BlogPage */}
+
             </Routes>
           </div>
           <Footer />

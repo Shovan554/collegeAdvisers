@@ -1,0 +1,69 @@
+.blog-card {
+    background: linear-gradient(135deg, #ffffff, #defffd); /* Gradient background */
+    border: 1px solid #000; /* Added black border for visibility */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Added padding on top, bottom, and sides */
+    margin: 20px auto; /* Center the card horizontally */
+    transition: all 0.3s ease-in-out;
+    max-height: 200px; /* Initial collapsed height */
+    width: 80%; /* Set width to 80% of the container */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.blog-card.expanded {
+    max-height: none; /* Allow expansion */
+}
+
+.blog-title {
+    font-size: 24px; /* Ensure consistent title size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.blog-subtitle {
+    font-size: 18px; /* Ensure consistent subtitle size */
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.blog-content {
+    font-size: 16px; /* Consistent font size for content */
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    max-height: 100px; /* Limit height when collapsed */
+    transition: max-height 0.3s ease; /* Smooth transition for expansion */
+}
+
+.blog-content.hide {
+    max-height: 100px; /* Limit content height when collapsed */
+    overflow: hidden;
+}
+
+.blog-content.show {
+    max-height: none; /* Show all content when expanded */
+}
+
+.read-more-btn {
+    background-color: #4e18fd;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.read-more-btn:hover {
+    background-color: #3713b2;
+}

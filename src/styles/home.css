@@ -77,7 +77,7 @@
   /* General Content Sections Styling */
 .content-section {
     padding: 30px;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #fffafa);
     border-radius: 50px;
     box-shadow: 10px 5px 10px 5px rgba(136, 81, 81, 0.1);
     border: 0.1px solid #ffffff; /* Add a black border */
