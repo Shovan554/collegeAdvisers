@@ -8,14 +8,11 @@ const BlogPage = () => {
       <h1 className="blog-page-title">Our Blogs</h1>
       <div className="blog-cards-container">
         <BlogCard 
-          title="Study Abroad Opportunities"
+          title="Applying to the U.S. Colleges for 2025? Here's What You Need to Know:"
+          author="Pragati Karki "
           subtitle="Explore various options to study overseas"
-          filePath="/blogs/blog1.txt"
-        />
-        <BlogCard
-          title="Suck balls"
-          subtitle="Explore my balls"
-          filePath="/blogs/blog1.txt"
+          date="Oct 28 2024"
+          filePath="/blogs/blog1.docx" // Update to .docx file
         />
       </div>
     </div>

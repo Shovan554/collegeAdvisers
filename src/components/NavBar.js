@@ -51,16 +51,16 @@ const Navbar = () => {
         <Link to="/about" className="navbar-link">
           About us
         </Link>
-        <Link to="/services" className="navbar-link">
-          Our Services
+        <Link to="/scholarships" className="navbar-link">
+          Scholarships
         </Link>
-        <Link to="/resources" className="navbar-link">
-          Resources
+        <Link to="/resourcesAndServices" className="navbar-link">
+          Resources and Services
         </Link>
         <Link to="/blog" className="navbar-link">
           Blog
         </Link>
-        <Link to="/contact" className="navbar-link">
+        <Link to="/contactUs" className="navbar-link">
           Contact Us
         </Link>
       </div>

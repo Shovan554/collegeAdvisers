@@ -31,8 +31,14 @@
     margin-bottom: 15px;
 }
 
+.blog-author{
+    font-size: 18px; /* Ensure consistent subtitle size */
+    color: #0f48a5;
+  
+    margin-bottom: 5px;
+}
 .blog-content {
-    font-size: 16px; /* Consistent font size for content */
+    font-size: 20px; /* Consistent font size for content */
     color: #666;
     line-height: 1.6;
     margin-bottom: 15px;

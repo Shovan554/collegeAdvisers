@@ -35,6 +35,13 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleBookAppointment = () => {
+    window.open(
+      "https://calendly.com/collegeadvisors2021/30min?fbclid=PAZXh0bgNhZW0CMTEAAaaWCJZpDUrnHjBq3Vzy5ZWc3zmI6o9l2j4xT9a0IZs2DB0Ds9s-K4uyRbU_aem_IF118fMbAT9_BxghctQ7zA&month=2024-10",
+      "_blank"
+    );
+  };
+
   return (
     <div className={`home-container ${slideIn ? "slide-in" : ""}`}>
       <section className="home-top">
@@ -69,7 +76,7 @@ const Home = () => {
           <p>
             With our expert guidance, you'll be empowered to make informed decisions and take the necessary steps to achieve your educational goals.
           </p>
-          <button className="home-button">Book an Appointment</button>
+          <button className="home-button" onClick={handleBookAppointment}>Book an Appointment</button>
         </section>
       </div>
     </div>

@@ -4,7 +4,10 @@ import Home from "./pages/Home";
 import BlogPage from "./pages/BlogPage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import About from "./pages/About";
+import ResourcesAndServices from "./pages/ResourcesAndServices";
 import LoadingScreen from "./components/LoadingScreen";
+import ContactUs from "./pages/ContactUs";
 import "./App.css";
 
 function App() {
@@ -31,7 +34,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/blog" element={<BlogPage />} /> {/* Add BlogPage */}
-
+              <Route path="/about" element={<About />} />
+              <Route path="/resourcesAndServices" element={<ResourcesAndServices />} />
+              <Route path="/contactUs" element={<ContactUs / >} />
             </Routes>
           </div>
           <Footer />

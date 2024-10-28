@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
+import mammoth from "mammoth";
 import "../styles/blogCard.css";
 
-const BlogCard = ({ title, subtitle, filePath }) => {
+const BlogCard = ({ title, subtitle, author,date, filePath }) => {
   const [content, setContent] = useState("");
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
-    // Fetch content from the text file
     fetch(filePath)
-      .then(response => response.text())
-      .then(text => setContent(text))
-      .catch(err => console.error("Failed to load blog content:", err));
+      .then((response) => response.arrayBuffer())
+      .then((arrayBuffer) => {
+        return mammoth.convertToHtml({ arrayBuffer });
+      })
+      .then((result) => {
+        setContent(result.value);
+      })
+      .catch((err) => console.error("Failed to load blog content:", err));
   }, [filePath]);
 
   const toggleExpanded = () => {
@@ -20,10 +25,17 @@ const BlogCard = ({ title, subtitle, filePath }) => {
   return (
     <div className={`blog-card ${expanded ? "expanded" : ""}`}>
       <h2 className="blog-title">{title}</h2>
+      <h4 className="blog-author">{author}</h4>
+      <h4 className="blog-date">{date}</h4>
       <h4 className="blog-subtitle">{subtitle}</h4>
-      <p className={`blog-content ${expanded ? "show" : "hide"}`}>
-        {expanded ? content : content.substring(0, 100) + "..."}
-      </p>
+
+      <div
+        className={`blog-content ${expanded ? "show" : "hide"}`}
+        dangerouslySetInnerHTML={{
+          __html: expanded ? content : content.substring(0, 100) + "...",
+        }}
+      ></div>
+
       <button onClick={toggleExpanded} className="read-more-btn">
         {expanded ? "Read Less" : "Read More"}
       </button>

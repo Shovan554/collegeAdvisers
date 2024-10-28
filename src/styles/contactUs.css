@@ -1,0 +1,68 @@
+.contact-us-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-us-left,
+  .contact-us-right {
+    width: 70%;
+    padding: 10px;
+  }
+  
+  .contact-us-title {
+    padding-top:190px;
+    font-size: 60px; /* Bigger font size */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    font-family: 'LuckiestGuy', sans-serif;
+  }
+  
+  .contact-us-right {
+    padding-top:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-form-container {
+
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .contact-form-container input,
+  .contact-form-container textarea {
+   
+    width: 100%;
+    padding: 15px 20px; /* Increased padding for bigger input fields */
+    margin-bottom: 20px; /* Increased space between inputs */
+    font-size: 18px; /* Larger font for readability */
+    border-radius: 50px; /* Rounded corners */
+    border: 1px solid #ccc;
+  }
+  
+  .contact-form-container textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+  }
+  
+  .contact-form-container button {
+    width: 30%; /* Button width at 30% of the form */
+    padding: 12px; /* Padding for button */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded corners */
+    background-color: #4e18fd;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form-container button:hover {
+    background-color: #3713b2;
+  }
