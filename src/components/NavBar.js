@@ -4,10 +4,10 @@ import Logo from "../components/Logo"; // Import the Logo component
 import "../styles/navbar.css"; // Import your CSS
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State to manage menu visibility
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen); // Toggle the open state
   };
 
   useEffect(() => {
@@ -45,24 +45,12 @@ const Navbar = () => {
 
       {/* Navbar Links */}
       <div className={`navbar-links ${isOpen ? "block" : "hidden"} md:flex`}>
-        <Link to="/" className="navbar-link">
-          Home
-        </Link>
-        <Link to="/about" className="navbar-link">
-          About us
-        </Link>
-        <Link to="/scholarships" className="navbar-link">
-          Scholarships
-        </Link>
-        <Link to="/resourcesAndServices" className="navbar-link">
-          Resources and Services
-        </Link>
-        <Link to="/blog" className="navbar-link">
-          Blog
-        </Link>
-        <Link to="/contactUs" className="navbar-link">
-          Contact Us
-        </Link>
+        <Link to="/" className="navbar-link">Home</Link>
+        <Link to="/about" className="navbar-link">About us</Link>
+        <Link to="/scholarships" className="navbar-link">Scholarships</Link>
+        <Link to="/resourcesAndServices" className="navbar-link">Resources and Services</Link>
+        <Link to="/blog" className="navbar-link">Blog</Link>
+        <Link to="/contactUs" className="navbar-link">Contact Us</Link>
       </div>
     </nav>
   );

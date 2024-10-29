@@ -1,37 +1,98 @@
-/* Footer Container */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #000000; /* Adjust color as needed */
-    color: #ffffff;
-    width: 100%;
-    position: fixed; /* Fix at the bottom */
-    bottom: -100px; /* Initially off-screen */
-    left: 0;
-    z-index: 1000;
-    font-size: 14px;
-    transition: bottom 0.6s ease-out; /* Smooth slide transition */
+  background-color: #000; /* Set background color to black */
+  color: #fff; /* Set text color to white for contrast */
+  padding: 0; /* Remove padding to eliminate gaps */
+  width: 100%; /* Ensure full width */
+  position: fixed; /* Allow for positioning of elements */
+  left: 0; /* Align left to eliminate gaps */
+  right: 0; /* Align right to eliminate gaps */
+  margin: 0; /* Remove any default margin */
+  bottom:0;
+  
 }
 
-/* Add this class to trigger slide up */
-.footer.slide-up {
-    bottom: 0; /* Slide up to its normal position */
+/* Footer Top Section */
+.footer-top {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out items */
+  gap: 10px; /* Space between logo and title */
 }
 
-/* Left Side of the Footer */
-.footer-left a {
-    color: #4e18fd; /* Color for the link */
-    text-decoration: none;
+/* Footer Title */
+.footer-title {
+  font-size: 18px; /* Adjust title size */
+  color: #fff; /* Ensure title is white */
 }
 
-.footer-left a:hover {
-    text-decoration: underline; /* Add underline on hover */
+/* Footer Logo */
+.footer-logo {
+  display: flex; /* Flex for the logo */
+  align-items: center; /* Center vertically */
 }
 
-/* Right Side of the Footer */
+/* Footer Social Section */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between follow text and icon */
+}
+
+/* Social Span */
+.footer-social span {
+  font-size: 16px;
+  color: #fff; /* Ensure text is white */
+}
+
+/* Instagram Icon */
+.instagram-icon {
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for Instagram icon */
+.instagram-icon:hover {
+  color: #c13584; /* Change color on hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; /* Space left and right sections */
+  margin-top: 20px; /* Add some spacing from the top */
+}
+
+/* Footer Left and Right */
+.footer-left,
 .footer-right {
-    font-size: 14px;
-    padding-right: 20px;
+  font-size: 14px; /* Adjust font size */
+  color: #fff; /* Ensure text is white */
+}
+
+/* Responsive Styling for Mobile Screens */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: flex-start; /* Align items to start */
+    gap: 5px; /* Reduce gap for stacked items */
+  }
+
+  .footer-title {
+    font-size: 16px; /* Adjust title size for mobile */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack bottom items vertically */
+    align-items: center; /* Center align */
+    justify-content: center; /* Center content */
+    margin-top: 10px; /* Reduce margin for mobile */
+  }
+
+  .footer-left,
+  .footer-right {
+    font-size: 12px; /* Reduce font size for mobile */
+    text-align: center; /* Center align text */
+  }
 }

@@ -11,7 +11,7 @@ const Home = () => {
     // Trigger the slide-in effect when the Home component mounts
     setTimeout(() => {
       setSlideIn(true);
-    }, 100); // Adjust timing if needed
+    }, 100);
 
     // Scroll effect for content sections
     const handleScroll = () => {
@@ -31,7 +31,6 @@ const Home = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup event listener on component unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

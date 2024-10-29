@@ -3,20 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; /* Adjusted padding to fit better */
-  background-color: #000000;
+  padding: 10px;
+  background-color: #000;
   width: 100%;
-  position: fixed; /* Make it stick to the top */
-  top: -100px; /* Initially off-screen */
+  position: fixed;
+  top: 0; /* Position navbar at the top */
   left: 0;
-  z-index: 1000; /* Ensure it stays on top */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add slight shadow */
-  transition: top 0.6s ease-out; /* Smooth slide transition */
-}
-
-/* Add this class to trigger slide down */
-.navbar.slide-down {
-  top: 0; /* Slide down to its normal position */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: top 0.6s ease-out;
 }
 
 /* Logo and Title Container */
@@ -25,24 +20,11 @@
   align-items: center;
 }
 
-/* Logo Styling */
-.navbar-logo {
-  width: 80px;
-  height: 80px;
-  margin-right: 10px;
-}
-
-/* Title Styling */
-.navbar-title {
-  font-size: 20px;
-  color: #fff;
-}
-
 /* Links Container */
 .navbar-links {
   display: flex;
   gap: 25px;
-  padding-right: 20px; /* Added padding to create space after the last item */
+  padding-right: 20px;
 }
 
 /* Individual Link Styling */
@@ -52,33 +34,19 @@
   text-decoration: none;
 }
 
-.navbar-link:hover {
-  color: #E5E7EB;
-}
-
 /* Menu Icon Styling for Mobile */
 .navbar-menu-icon {
-  display: none;
+  display: none; /* Hidden by default */
   cursor: pointer;
   color: #fff;
 }
 
-/* Hamburger Icon */
-.menu-icon {
-  width: 25px;
-  height: 25px;
-}
-
 /* Responsive Styling for Mobile Screens */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 10px 15px; /* Reduce padding for smaller screens */
-  }
-
   .navbar-links {
     display: none; /* Hide links by default */
     flex-direction: column; /* Stack links vertically */
-    background-color: #000000;
+    background-color: #000;
     position: absolute;
     top: 60px; /* Adjust to place dropdown below navbar */
     right: 10px;
