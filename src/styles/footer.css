@@ -6,7 +6,6 @@
   position: fixed; /* Allow for positioning of elements */
   left: 0; /* Align left to eliminate gaps */
   right: 0; /* Align right to eliminate gaps */
-  margin: 0; /* Remove any default margin */
   bottom:0;
   
 }
@@ -87,7 +86,6 @@
     flex-direction: column; /* Stack bottom items vertically */
     align-items: center; /* Center align */
     justify-content: center; /* Center content */
-    margin-top: 10px; /* Reduce margin for mobile */
   }
 
   .footer-left,
