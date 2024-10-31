@@ -12,6 +12,7 @@
     position: relative;
     display: flex;
     flex-direction: column; /* Stack items vertically */
+    margin-bottom:100px;
 }
 
 .blog-card.expanded {
@@ -38,7 +39,7 @@
     margin-bottom: 5px;
 }
 .blog-content {
-    font-size: 20px; /* Consistent font size for content */
+    font-size: 18px; /* Consistent font size for content */
     color: #666;
     line-height: 1.6;
     margin-bottom: 15px;

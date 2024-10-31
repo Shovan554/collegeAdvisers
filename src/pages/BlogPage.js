@@ -12,8 +12,10 @@ const BlogPage = () => {
           author="Pragati Karki "
           subtitle="Explore various options to study overseas"
           date="Oct 28 2024"
+          imageFilePath="/images/blog1.jpg"
           filePath="/blogs/blog1.docx" // Update to .docx file
         />
+        
       </div>
     </div>
   );

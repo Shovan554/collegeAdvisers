@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import mammoth from "mammoth";
 import "../styles/blogCard.css";
 
-const BlogCard = ({ title, subtitle, author,date, filePath }) => {
+const BlogCard = ({ title, subtitle, author,date,imageFilePath,filePath }) => {
   const [content, setContent] = useState("");
   const [expanded, setExpanded] = useState(false);
 
@@ -28,6 +28,7 @@ const BlogCard = ({ title, subtitle, author,date, filePath }) => {
       <h4 className="blog-author">{author}</h4>
       <h4 className="blog-date">{date}</h4>
       <h4 className="blog-subtitle">{subtitle}</h4>
+      <img className="blog-image" src={imageFilePath} alt={title} />
 
       <div
         className={`blog-content ${expanded ? "show" : "hide"}`}

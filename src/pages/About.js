@@ -6,6 +6,8 @@ import founderAnimation from "../assets/animations/founder.json";
 import promiseAnimation from "../assets/animations/promise.json";
 import diverseAnimation from "../assets/animations/diverse.json";
 import "../styles/about.css";
+import TeamCard from "../components/TeamCard";
+
 
 const About = () => {
   useEffect(() => {
@@ -144,6 +146,18 @@ const About = () => {
           </div>
         </div>
       </section>
+      <section className="about-team">
+        <h2 className="team-title">Meet the Team</h2>
+        
+      <TeamCard 
+    memberName="Pragati Karki"
+    position="CEO"
+    linkedIn="https://www.linkedin.com/in/pragatikarki/"
+    description="Pragati is a dedicated college counselor with over 8 years of experience helping high school students achieve their dreams of studying abroad. She has successfully placed over 80 students in universities worldwide, securing a total of $2 million in scholarships. Pragati’s passion for education is evident in her commitment to guiding students through the admissions process and optimizing their LinkedIn profiles. She believes in empowering students to make informed decisions for their future."
+    imageFilePath="/team/pragati.jpeg"
+/>
+      </section>
+     
     </div>
   );
 };

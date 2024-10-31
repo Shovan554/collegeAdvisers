@@ -1,39 +1,4 @@
-.contact-us-page {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-  }
-  
-  .contact-us-left,
-  .contact-us-right {
-    width: 70%;
-    padding: 10px;
-  }
-  
-  .contact-us-title {
-    padding-top:190px;
-    font-size: 60px; /* Bigger font size */
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    font-family: 'LuckiestGuy', sans-serif;
-  }
-  
-  .contact-us-right {
-    padding-top:90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .contact-form-container {
 
-    width: 100%;
-    max-width: 500px;
-  }
   
   .contact-form-container input,
   .contact-form-container textarea {
@@ -65,4 +30,54 @@
   
   .contact-form-container button:hover {
     background-color: #3713b2;
+  }
+
+
+
+
+  .contact-us-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-us-left {
+    width: 70%;
+    padding: 10px;
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin-top:100px;
+    
+  }
+  
+  .contact-us-title {
+    padding-top: 20px; /* Adjust top padding */
+    font-size: 60px; /* Bigger font size */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    font-family: 'LuckiestGuy', sans-serif;
+  }
+  
+  .contact-us-right {
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 10px;
+    margin-top:100px;
+  }
+  
+  .contact-form-container {
+    width: 100%;
+    max-width: 500px;
+    
+    padding: 10px;
   }
