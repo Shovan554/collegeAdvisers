@@ -8,6 +8,7 @@ import About from "./pages/About";
 import ResourcesAndServices from "./pages/ResourcesAndServices";
 import LoadingScreen from "./components/LoadingScreen";
 import ContactUs from "./pages/ContactUs";
+import ScrollToTop from "./components/ScrollToTop"; // Import ScrollToTop
 import "./App.css";
 
 function App() {
@@ -16,10 +17,9 @@ function App() {
 
   useEffect(() => {
     if (!loading) {
-      // Delay to trigger slide-in effect when Home component loads
       setTimeout(() => {
         setSlideIn(true);
-      }, 100); // Adjust timing as needed
+      }, 100);
     }
   }, [loading]);
 
@@ -30,13 +30,14 @@ function App() {
       ) : (
         <>
           <NavBar />
+          <ScrollToTop /> {/* Add ScrollToTop component here */}
           <div className={`home-wrapper ${slideIn ? "slide-in" : ""}`}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/blog" element={<BlogPage />} /> {/* Add BlogPage */}
+              <Route path="/blog" element={<BlogPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/resourcesAndServices" element={<ResourcesAndServices />} />
-              <Route path="/contactUs" element={<ContactUs / >} />
+              <Route path="/contactUs" element={<ContactUs />} />
             </Routes>
           </div>
           <Footer />
