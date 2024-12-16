@@ -32,35 +32,54 @@
   color: #fff;
   font-size: 17px;
   text-decoration: none;
+  margin-top: 10px; /* Added margin for individual links */
 }
 
-/* Menu Icon Styling for Mobile */
+/* Hamburger Menu Icon Styling */
 .navbar-menu-icon {
   display: none; /* Hidden by default */
   cursor: pointer;
   color: #fff;
+  z-index: 1100; /* Ensure it stays above other elements */
+}
+
+/* Book an Appointment Button */
+.navbar-button {
+  background-color: #4e18fd;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+  background-color: #3b13c2;
 }
 
 /* Responsive Styling for Mobile Screens */
 @media (max-width: 768px) {
+  .navbar-menu-icon {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
   .navbar-links {
     display: none; /* Hide links by default */
     flex-direction: column; /* Stack links vertically */
-    background-color: #000;
+    background-color: #ffffff;
     position: absolute;
     top: 60px; /* Adjust to place dropdown below navbar */
     right: 10px;
     padding: 10px;
     border-radius: 5px;
-    width: 150px;
+    width: 200px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add slight shadow */
   }
 
   .navbar-links.block {
     display: flex; /* Show links when menu is toggled */
-  }
-
-  .navbar-menu-icon {
-    display: block; /* Show hamburger icon on mobile */
   }
 }

@@ -1,65 +1,75 @@
+/* Footer */
 .footer {
   background-color: #000; /* Set background color to black */
   color: #fff; /* Set text color to white for contrast */
-  padding: 0; /* Remove padding to eliminate gaps */
+  padding: 10px 0; /* Reduce padding for a more compact layout */
   width: 100%; /* Ensure full width */
-  position: fixed; /* Allow for positioning of elements */
-  left: 0; /* Align left to eliminate gaps */
-  right: 0; /* Align right to eliminate gaps */
-  bottom:0;
-  
+  position: relative; /* Allow for positioning of elements */
+  text-align: center; /* Center-align text content */
 }
 
 /* Footer Top Section */
 .footer-top {
   display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space out items */
-
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align items */
+  gap: 5px; /* Reduce gap between elements */
+  margin-bottom: 10px; /* Reduce space between top and bottom sections */
 }
 
 /* Footer Title */
 .footer-title {
   font-size: 18px; /* Adjust title size */
-  color: #fff; /* Ensure title is white */
+  margin: 0; /* Remove extra spacing */
 }
 
 /* Footer Logo */
 .footer-logo {
-
-  align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Footer Social Section */
 .footer-social {
   display: flex;
+  flex-direction: column; /* Stack text and icons vertically */
   align-items: center;
-  gap: 8px; /* Space between follow text and icon */
+  gap: 3px; /* Reduce space between items */
 }
 
 /* Social Span */
 .footer-social span {
-  font-size: 16px;
+  font-size: 16px; /* Adjust font size */
   color: #fff; /* Ensure text is white */
+  margin-bottom: 5px; /* Add slight margin below the text */
 }
 
-/* Instagram Icon */
-.instagram-icon {
+/* Instagram and TikTok Icons */
+.instagram-icon,
+.tiktok-icon {
   width: 24px;
   height: 24px;
+  margin: 2px; /* Reduce margin between icons */
   transition: color 0.3s ease;
 }
 
-/* Hover effect for Instagram icon */
+/* Hover effect for social icons */
 .instagram-icon:hover {
-  color: #c13584; /* Change color on hover */
+  color: #c13584; /* Change Instagram icon color on hover */
+}
+
+.tiktok-icon:hover {
+  color: #ffffff; /* Change TikTok icon color on hover */
 }
 
 /* Footer Bottom Section */
 .footer-bottom {
   display: flex;
   justify-content: space-between; /* Space left and right sections */
-  margin-top: 1px; /* Add some spacing from the top */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+  gap: 2px; /* Reduce spacing between sections */
+  margin-top: 5px; /* Add slight spacing from the top */
 }
 
 /* Footer Left and Right */
@@ -69,28 +79,16 @@
   color: #fff; /* Ensure text is white */
 }
 
-/* Responsive Styling for Mobile Screens */
+/* Responsive Styling */
 @media (max-width: 768px) {
-  .footer-top {
-    flex-direction: column; /* Stack items vertically on mobile */
-    align-items: flex-start; /* Align items to start */
-    gap: 5px; /* Reduce gap for stacked items */
-  }
-
-  .footer-title {
-    font-size: 16px; /* Adjust title size for mobile */
-    text-align: center; /* Center text on mobile */
-  }
-
   .footer-bottom {
-    flex-direction: column; /* Stack bottom items vertically */
-    align-items: center; /* Center align */
-    justify-content: center; /* Center content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+    text-align: center; /* Center-align text */
   }
 
   .footer-left,
   .footer-right {
-    font-size: 12px; /* Reduce font size for mobile */
-    text-align: center; /* Center align text */
+    font-size: 12px; /* Adjust font size for mobile */
   }
 }

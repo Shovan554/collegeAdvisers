@@ -47,10 +47,14 @@ const Navbar = () => {
       <div className={`navbar-links ${isOpen ? "block" : "hidden"} md:flex`}>
         <Link to="/" className="navbar-link">Home</Link>
         <Link to="/about" className="navbar-link">About us</Link>
-        {/* <Link to="/scholarships" className="navbar-link">Scholarships</Link> */}
         <Link to="/resourcesAndServices" className="navbar-link">Resources and Services</Link>
         <Link to="/blog" className="navbar-link">Blog</Link>
         <Link to="/contactUs" className="navbar-link">Contact Us</Link>
+
+        {/* Book an Appointment Button */}
+        <Link to="/bookAppointment" className="navbar-button">
+          Book an Appointment
+        </Link>
       </div>
     </nav>
   );

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Lottie from "lottie-react";
-import { FaInstagram } from "react-icons/fa"; // Import Instagram icon
+import { FaInstagram, FaTiktok } from "react-icons/fa"; // Import Instagram and TikTok icons
 import "../styles/footer.css";
 import logoAnimation from "../assets/animations/logoAnimation.json"; // Ensure correct path
 
@@ -19,15 +19,24 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-top">
-        <div className="footer-logo">
-          <Lottie animationData={logoAnimation} loop={true} style={{ width: 50, height: 50 }} />
+        <div className="footer-header" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div className="footer-logo">
+            <Lottie animationData={logoAnimation} loop={true} style={{ width: 50, height: 50 }} />
+          </div>
+          <h2 className="footer-title">The College Advisers</h2>
         </div>
-        <h2 className="footer-title">The College Advisers</h2>
+        <p>Kathmandu, Nepal</p>
+        <p>+9779800000000</p>
         <div className="footer-social">
           <span>Follow us on</span>
-          <a href="https://www.instagram.com/the.college.advisers/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={24} color="#E1306C" className="instagram-icon" /> {/* Instagram icon */}
-          </a>
+          <div className="footer-icons">
+            <a href="https://www.instagram.com/the.college.advisers/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={24} color="#E1306C" className="instagram-icon" /> {/* Instagram icon */}
+            </a>
+            <a href="https://www.tiktok.com/@the.college.advisers" target="_blank" rel="noopener noreferrer">
+              <FaTiktok size={24} color="#fff" className="tiktok-icon" /> {/* TikTok icon */}
+            </a>
+          </div>
         </div>
       </div>
 
