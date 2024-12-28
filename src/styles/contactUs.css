@@ -1,83 +1,102 @@
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+}
 
-  
-  .contact-form-container input,
-  .contact-form-container textarea {
-   
-    width: 100%;
-    padding: 15px 20px; /* Increased padding for bigger input fields */
-    margin-bottom: 20px; /* Increased space between inputs */
-    font-size: 18px; /* Larger font for readability */
-    border-radius: 50px; /* Rounded corners */
-    border: 1px solid #ccc;
-  }
-  
-  .contact-form-container textarea {
-    resize: vertical; /* Allow vertical resizing of textarea */
-  }
-  
-  .contact-form-container button {
-    width: 30%; /* Button width at 30% of the form */
-    padding: 12px; /* Padding for button */
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 50px; /* Rounded corners */
-    background-color: #4e18fd;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-form-container button:hover {
-    background-color: #3713b2;
-  }
+.contact-form-container textarea {
+  resize: vertical;
+}
 
+.contact-form-container button {
+  width: 30%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: #4e18fd;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.contact-form-container button:hover {
+  background-color: #3713b2;
+}
 
+.contact-us-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
 
+/* Left section - animation */
+.contact-us-left {
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+/* Title Styling */
+.contact-us-title {
+  padding-top: 20px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  font-family: 'LuckiestGuy', sans-serif;
+}
+
+/* Right section - form */
+.contact-us-right {
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contact-form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+}
+
+/* Mobile View - Animation on Top */
+@media (max-width: 768px) {
   .contact-us-page {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-  }
-  
-  .contact-us-left {
-    width: 70%;
-    padding: 10px;
-    display: flex; /* Use flexbox to align items */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    margin-top:100px;
-    
-  }
-  
-  .contact-us-title {
-    padding-top: 20px; /* Adjust top padding */
-    font-size: 60px; /* Bigger font size */
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    font-family: 'LuckiestGuy', sans-serif;
-  }
-  
-  .contact-us-right {
-    width: 70%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;  /* Stack items vertically */
     align-items: center;
-    width: 70%;
-    padding: 10px;
-    margin-top:100px;
   }
-  
-  .contact-form-container {
+
+  .contact-us-left {
     width: 100%;
-    max-width: 500px;
-    
-    padding: 10px;
+    margin-top: 50px;  /* Adjust margin for spacing */
   }
+
+  .contact-us-right {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .contact-form-container button {
+    width: 60%;  /* Make button larger for mobile */
+  }
+
+  .contact-us-title {
+    font-size: 45px;  /* Adjust title size for smaller screens */
+  }
+}

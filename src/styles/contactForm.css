@@ -1,65 +1,115 @@
 .contact-form-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 30px; /* Added more padding */
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column; /* Ensures inputs stack vertically */
-    align-items: center; /* Centers the form inputs */
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-container h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #333;
+  align-self: flex-start;
+}
+
+form input,
+form textarea {
+  width: 90%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  width: 50%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #4e18fd;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3713b2;
+}
+
+.status-message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #4e18fd;
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 20px;
+    width: 90%;
   }
-  
+
   .contact-form-container h1 {
-    text-align: center;
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px; /* Added space below title */
+    font-size: 24px;
   }
-  
-  form label {
-    font-size: 16px;
-    margin-top: 15px;
-    color: #333;
-    align-self: flex-start; /* Align labels to the start */
-  }
-  
+
   form input,
   form textarea {
-    width: 90%; /* Ensure inputs stay within container */
-    padding: 12px; /* Increased padding for larger inputs */
-    margin-top: 8px; /* Space between label and input */
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 16px;
-    box-sizing: border-box; /* Prevents padding from affecting width */
+    width: 100%;
+    padding: 10px;
   }
-  
-  form textarea {
-    resize: vertical; /* Allow vertical resizing for text area */
-  }
-  
+
   form button {
-    width: 50%; /* Button width at 50% of container */
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #4e18fd;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  form button:hover {
-    background-color: #3713b2;
-  }
-  
-  .status-message {
-    text-align: center;
-    margin-top: 15px;
+    width: 70%;
     font-size: 16px;
-    color: #4e18fd;
   }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .contact-form-container h1 {
+    font-size: 22px;
+  }
+
+  form label {
+    font-size: 14px;
+  }
+
+  form input,
+  form textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  form button {
+    width: 100%;
+    font-size: 10px;
+  }
+}

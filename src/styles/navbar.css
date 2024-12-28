@@ -3,83 +3,109 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 15px 20px;
   background-color: #000;
   width: 100%;
   position: fixed;
-  top: 0; /* Position navbar at the top */
+  top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: top 0.6s ease-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo and Title Container */
+/* Logo Container */
 .navbar-logo-container {
   display: flex;
   align-items: center;
 }
 
-/* Links Container */
+/* Desktop Links */
 .navbar-links {
   display: flex;
-  gap: 25px;
-  padding-right: 20px;
+  gap: 30px;
+  padding-right: 30px;
 }
 
 /* Individual Link Styling */
 .navbar-link {
   color: #fff;
-  font-size: 17px;
+  font-size: 18px;
   text-decoration: none;
-  margin-top: 10px; /* Added margin for individual links */
+  padding: 10px 15px;
 }
 
-/* Hamburger Menu Icon Styling */
+.navbar-link:hover {
+  color: #4e18fd;
+}
+
+/* Hamburger Menu Icon (Hidden on Desktop) */
 .navbar-menu-icon {
-  display: none; /* Hidden by default */
+  display: none;
   cursor: pointer;
   color: #fff;
-  z-index: 1100; /* Ensure it stays above other elements */
+  font-size: 28px;
+}
+
+/* Hamburger Icon Animation */
+.menu-icon.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
 }
 
 /* Book an Appointment Button */
 .navbar-button {
   background-color: #4e18fd;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 50px;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  margin-left: 10px;
-  transition: background-color 0.3s ease;
+  margin-left: 15px;
 }
 
 .navbar-button:hover {
   background-color: #3b13c2;
 }
 
-/* Responsive Styling for Mobile Screens */
+/* Responsive Mobile Menu */
 @media (max-width: 768px) {
   .navbar-menu-icon {
-    display: block; /* Show hamburger icon on mobile */
+    display: block;  /* Show hamburger icon */
   }
 
   .navbar-links {
-    display: none; /* Hide links by default */
-    flex-direction: column; /* Stack links vertically */
-    background-color: #ffffff;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #000;
     position: absolute;
-    top: 60px; /* Adjust to place dropdown below navbar */
-    right: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
+  /* Show Links When Toggled */
   .navbar-links.block {
-    display: flex; /* Show links when menu is toggled */
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar-link {
+    padding: 12px 25px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-button {
+    width: 90%;
+    margin: 15px auto;
+    text-align: center;
   }
 }

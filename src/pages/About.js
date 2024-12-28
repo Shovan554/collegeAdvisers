@@ -146,18 +146,54 @@ const About = () => {
           </div>
         </div>
       </section>
+      <h2 className="team-title">Meet the Team</h2>
       <section className="about-team">
-        <h2 className="team-title">Meet the Team</h2>
+        
         
       <TeamCard 
     memberName="Pragati Karki"
-    position="CEO"
+    position="Founder"
     linkedIn="https://www.linkedin.com/in/pragatikarki/"
-    description="Pragati is a dedicated college counselor with over 8 years of experience helping high school students achieve their dreams of studying abroad. She has successfully placed over 80 students in universities worldwide, securing a total of $2 million in scholarships. Pragati’s passion for education is evident in her commitment to guiding students through the admissions process and optimizing their LinkedIn profiles. She believes in empowering students to make informed decisions for their future."
+    description="Pragati Karki is a dedicated college counselor with over five years of experience helping high school students navigate their academic and career journeys. She has guided more than 80 students in achieving their educational goals, including placements at top universities and securing $2 million in scholarships.
+
+Her expertise spans career planning, university admissions, and skill-building, empowering students to make confident and informed decisions about their future. Pragati’s passion for education and personalized approach has established her as a trusted mentor in shaping student success.
+
+"
     imageFilePath="/team/pragati.jpeg"
 />
+<TeamCard 
+    memberName="Pragya Karki"
+    position="Advisor"
+    linkedIn="https://www.linkedin.com/in/pragya-karki003/"
+    description="Pragya Karki is a dedicated guidance counselor with extensive experience working with high school students. Currently at Ullens School, one of Nepal's leading IB institutions, she specializes in guiding A-Level and IB students toward their best-fit universities worldwide.
+
+ 
+
+With a certification in College and Career Counseling from the IC3 Institute, Pragya brings expertise in university admissions, career planning, and scholarship acquisition. Her ability to understand students' strengths and aspirations has helped them secure placements in renowned universities globally.
+
+ 
+
+Pragya is passionate about making guidance counseling accessible and empowering students to achieve their academic and career goals.
+
+"
+    imageFilePath="/team/Pragya.jpeg"
+/>
+
       </section>
-     
+      
+     <section>
+     <TeamCard 
+    memberName="Kriti"
+    position="Social Media Coordinator"
+   
+
+ 
+
+
+
+    imageFilePath="/team/Kriti.png"
+/>
+     </section>
     </div>
   );
 };

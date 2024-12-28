@@ -81,6 +81,9 @@
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+  .footer{
+    width:100%;
+  }
   .footer-bottom {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center-align items */

@@ -1,34 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo"; // Import the Logo component
 import "../styles/navbar.css"; // Import your CSS
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to manage menu visibility
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle the open state
+    setIsOpen(!isOpen);
   };
 
   useEffect(() => {
     const navbar = document.querySelector(".navbar");
     if (navbar) {
       setTimeout(() => {
-        navbar.classList.add("slide-down"); // Add the slide-down class on mount
-      }, 100); // Delay slightly to ensure smooth entry
+        navbar.classList.add("slide-down");
+      }, 100);
     }
+  }, []);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (!event.target.closest(".navbar")) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
 
   return (
     <nav className="navbar">
       <div className="navbar-logo-container">
-        <Logo /> {/* Use the Logo component here */}
+        <Logo />
       </div>
 
       {/* Hamburger Menu Icon */}
-      <div className="navbar-menu-icon" onClick={toggleMenu}>
+      <div className="navbar-menu-icon" onClick={toggleMenu} role="button" aria-label="Toggle Menu">
         <svg
-          className="menu-icon"
+          className={`menu-icon ${isOpen ? "rotate" : ""}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -44,15 +56,20 @@ const Navbar = () => {
       </div>
 
       {/* Navbar Links */}
-      <div className={`navbar-links ${isOpen ? "block" : "hidden"} md:flex`}>
-        <Link to="/" className="navbar-link">Home</Link>
-        <Link to="/about" className="navbar-link">About us</Link>
-        <Link to="/resourcesAndServices" className="navbar-link">Resources and Services</Link>
-        <Link to="/blog" className="navbar-link">Blog</Link>
-        <Link to="/contactUs" className="navbar-link">Contact Us</Link>
+      <div
+        className={`navbar-links ${isOpen ? "block" : "hidden"} md:flex`}
+      >
+        <Link to="/" className="navbar-link" onClick={() => setIsOpen(false)}>Home</Link>
+        <Link to="/about" className="navbar-link" onClick={() => setIsOpen(false)}>About us</Link>
+        <Link to="/resourcesAndServices" className="navbar-link" onClick={() => setIsOpen(false)}>Resources and Services</Link>
+        <Link to="/blog" className="navbar-link" onClick={() => setIsOpen(false)}>Blog</Link>
+        <Link to="/contactUs" className="navbar-link" onClick={() => setIsOpen(false)}>Contact Us</Link>
 
-        {/* Book an Appointment Button */}
-        <Link to="/bookAppointment" className="navbar-button">
+        <Link
+          to="https://calendly.com/collegeadvisors2021/30min"
+          className="navbar-button"
+          onClick={() => setIsOpen(false)}
+        >
           Book an Appointment
         </Link>
       </div>
