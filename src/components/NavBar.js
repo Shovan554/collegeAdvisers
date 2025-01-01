@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../components/Logo"; // Import the Logo component
-import "../styles/navbar.css"; // Import your CSS
+import Logo from "../components/Logo";
+import "../styles/navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Slide down effect for the navbar on mount
   useEffect(() => {
     const navbar = document.querySelector(".navbar");
     if (navbar) {
@@ -19,11 +17,10 @@ const Navbar = () => {
         navbar.classList.add("slide-down");
       }, 100);
     }
-    setShowNavbar(true);
   }, []);
 
   return (
-    <nav className={`navbar ${showNavbar ? 'slide-in-down' : ''}`}>
+    <nav className="navbar">
       <div className="navbar-logo-container">
         <Logo />
       </div>
@@ -31,7 +28,7 @@ const Navbar = () => {
       {/* Hamburger Menu Icon */}
       <div className="navbar-menu-icon md:hidden" onClick={toggleMenu}>
         <svg
-          className="menu-icon"
+          className={`menu-icon ${isOpen ? "rotate" : ""}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -64,14 +61,13 @@ const Navbar = () => {
           Contact Us
         </Link>
         <a
-  href="https://calendly.com/collegeadvisors2021/30min"
-  className="navbar-button"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setIsOpen(false)}
->
-  Book an Appointment
-</a>
+          href="https://calendly.com/collegeadvisors2021/30min"
+          className="navbar-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book an Appointment
+        </a>
       </div>
     </nav>
   );

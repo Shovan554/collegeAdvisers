@@ -28,7 +28,7 @@ const BlogPage = () => {
       <div className={`blog-cards-container ${isVisible ? 'blog-cards-visible' : ''}`}>
         <BlogCard 
           title="Applying to the U.S. Colleges for 2025? Here's What You Need to Know:"
-          author="Pragati Karki"
+          author="Pragya Karki"
           subtitle="Explore various options to study overseas"
           date="Oct 28 2024"
           imageFilePath="/images/blog1.jpg"
