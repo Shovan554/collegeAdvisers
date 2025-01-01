@@ -34,8 +34,7 @@ const BlogPage = () => {
           imageFilePath="/images/blog1.jpg"
           filePath="/blogs/blog1.docx" // Update to .docx file
         />
-        
-        {/* Add more BlogCard components as needed */}
+       
       </div>
     </div>
   );

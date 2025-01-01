@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
+  }; 
 
   useEffect(() => {
     const navbar = document.querySelector(".navbar");

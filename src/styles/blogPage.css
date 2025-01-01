@@ -1,22 +1,40 @@
-.blog-page {
-  padding-top: 120px; /* Ensure sufficient space from the navbar */
-  padding-bottom: 40px;
-  background-color: #f9f9f9;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the cards on the page */
-  transition: background-color 0.5s ease; /* Transition for background color */
+.blog-cards-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Three equal columns */
+  gap: 30px;  /* Space between each card */
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-top: 50px;  /* Add margin to push the cards down */
+  margin-left: auto;  /* Center align the grid */
+  margin-right: auto; /* Ensure it stays centered */
 }
 
-.blog-cards-container {
-  width: 80%; /* Ensure the container is consistent with the card width */
-  display: flex;
-  flex-direction: column; /* Stack the cards vertically */
-  gap: 20px; /* Space between each card */
-  opacity: 0; /* Start hidden */
-  transform: translateY(20px); /* Slide up effect */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for opacity and transform */
+.blog-card {
+  width: 100%;  /* Full width within the grid column */
+  max-width: 350px;  /* Limit the card width */
+  padding: 20px;  /* Padding inside the card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  background: linear-gradient(135deg, #ffffff, #defffd);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;  /* Center-align the text content */
+}
+
+.blog-card:hover {
+  transform: scale(1.03);  /* Slightly enlarge on hover */
+}
+
+.blog-image {
+  width: 100%;  /* Make the image span the full width of the card */
+  height: auto;  /* Maintain aspect ratio */
+  display: block;
+  border-radius: 10px 10px 0 0;  /* Optional: Rounded corners at the top */
+  object-fit: cover;
 }
 
 .blog-page-title {
@@ -24,13 +42,46 @@
   font-weight: bold;
   color: #333;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-family: 'LuckiestGuy', sans-serif;
-  transition: color 0.5s ease; /* Transition for color */
 }
 
-/* Add a class for when the blog cards are visible */
 .blog-cards-visible {
-  opacity: 1; /* Make visible */
-  transform: translateY(0); /* Reset transform */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blog-page {
+  padding-top: 120px;  /* Large space from the navbar */
+  padding-bottom: 50px;  /* Large space from the footer */
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center the cards on the page */
+}
+
+/* Responsive Design: 1 card per row for small screens */
+@media (max-width: 768px) {
+  .blog-cards-container {
+    grid-template-columns: 1fr;  /* Single column for smaller screens */
+    width: 100%;  /* Make container take full width */
+    margin-left: 0;  /* Reset left margin */
+    margin-right: 0; /* Reset right margin */
+    padding: 0 20px;  /* Add padding to avoid touching the screen edges */
+  }
+
+  .blog-card {
+    max-width: 100%;  /* Allow the card to take full width */
+  }
+}
+
+/* Medium screens: 2 cards per row */
+@media (max-width: 1024px) {
+  .blog-cards-container {
+    grid-template-columns: repeat(1, 1fr);  /* Two columns for tablets */
+    width: 80%;  /* Adjust width to 90% */
+    margin-left: auto;  /* Center align the grid */
+    margin-right: auto;  /* Center align the grid */
+  }
 }

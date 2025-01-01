@@ -10,6 +10,7 @@ import LoadingScreen from "./components/LoadingScreen";
 import ContactUs from "./pages/ContactUs";
 import ScrollToTop from "./components/ScrollToTop"; // Import ScrollToTop
 import "./App.css";
+import BlogDetails from "./pages/BlogDetails";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -32,13 +33,14 @@ function App() {
           <NavBar />
           <ScrollToTop /> {/* Add ScrollToTop component here */}
           <div className={`home-wrapper ${slideIn ? "slide-in" : ""}`}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/resourcesAndServices" element={<ResourcesAndServices />} />
-              <Route path="/contactUs" element={<ContactUs />} />
-            </Routes>
+          <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:title" element={<BlogDetails />} />  {/* New Route for Blog Details */}
+          <Route path="/about" element={<About />} />
+          <Route path="/resourcesAndServices" element={<ResourcesAndServices />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          </Routes>
           </div>
           <Footer />
         </>
