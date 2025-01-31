@@ -13,7 +13,7 @@
 .contact-form-container h1 {
   text-align: center;
   font-size: 28px;
-  color: #333;
+  color: #FF0078;
   margin-bottom: 20px;
 }
 
@@ -54,7 +54,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #3713b2;
+  filter:brightness(1.2);
 }
 
 .status-message {

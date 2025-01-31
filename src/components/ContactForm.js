@@ -20,10 +20,10 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs.send(
-        "service_xil5gyv",      // Your service ID
-        "template_b89nzhw",      // Your template ID
+        "service_qe9zw7o",      // Your service ID
+        "template_34vpnwt",      // Your template ID
         formData,                // Form data object with updated keys
-        "kSPSAhEHaWOGyhGNQ"      // Your public key
+        "QJ9bfch9eBJAOAKQo"      // Your public key
       )
       .then(
         (response) => {

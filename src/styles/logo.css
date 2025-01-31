@@ -1,59 +1,66 @@
 @font-face {
-    font-family: 'LuckiestGuy';
-    src: url('../assets/fonts/LuckiestGuy-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  /* Container for the entire logo component */
-  .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  /* Styling for the animation section */
-  .logo-animation {
-    width: 80px; /* Adjust size if needed */
-    height: 80px;
-    margin-right: 1px; /* Space between the animation and the text */
-  }
-  
-  /* Container for the text */
-  .logo-text-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Main text styling */
-  .logo-the {
-    font-family: 'LuckiestGuy', sans-serif;
-    font-size: 18px; /* Adjust font size as needed */
-    color: #4e18fd; /* Color for "The" */
-    text-align: left;
-  }
-  
-  /* Style for College Advisors line */
-  .logo-college,
-  .logo-advisors {
-    font-family: 'LuckiestGuy', sans-serif;
-    font-size: 24px; /* Adjust font size as needed */
-    color: #ffffff; /* Default color */
-  }
-  
-  /* Separate color styling */
-  .logo-college {
-    color: #ffffff;
-    margin-right: 5px; /* Adjust spacing between College and Advisors */
-  }
-  
-  .logo-advisors {
-    color: #4e18fd;
-  }
+  font-family: 'LuckiestGuy';
+  src: url('../assets/fonts/LuckiestGuy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Container for the entire logo component */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Styling for the animation section */
+.logo-animation {
+  width: 80px; /* Adjust size if needed */
+  height: 80px;
+  margin-right: 1px; /* Space between the animation and the text */
+}
+
+/* Container for the text */
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main text styling */
+.logo-the {
+  font-family: 'LuckiestGuy', sans-serif;
+  font-size: 18px; /* Adjust font size as needed */
+  background: linear-gradient(90deg, #FF0078, #F6EFA7); /* Gradient color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes the gradient visible */
+  text-align: left;
+}
+
+/* Style for College Advisors line */
+.logo-college{
+  font-family: 'LuckiestGuy', sans-serif;
+  font-size: 24px; /* Adjust font size as needed */
+  color:white;
+}
+.logo-advisors {
+  font-family: 'LuckiestGuy', sans-serif;
+  font-size: 24px; /* Adjust font size as needed */
+  background: linear-gradient(90deg, #FF0078, #F6EFA7); /* Gradient color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Separate color styling */
+.logo-college {
+  margin-right: 5px; /* Adjust spacing between College and Advisors */
+}
+
+.logo-advisors {
+  /* Gradient styling applied */
+}

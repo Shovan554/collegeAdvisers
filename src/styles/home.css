@@ -87,7 +87,7 @@
   justify-content: space-between;
   min-height: 400px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   opacity: 0; /* Initially hidden */
   transform: translateY(30px); /* Move down initially */
   transition: opacity 2s ease-out, transform 2s ease-out;
@@ -115,14 +115,14 @@
   cursor: pointer;
   border-radius: 50px;
   align-self: center;
-  background-color: #4e18fd;
+  background-color: #FF0078 ;
   color: #fff;
   margin-top: 20px;
   width: auto;
 }
 
 .home-button:hover {
-  background-color: #3713b2;
+  filter: brightness(1.2); /* Brighten on hover */
 }
 
 /* Responsive Styling */

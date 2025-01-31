@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #000;
+  background-color: #000; /* Black background remains */
   width: 100%;
   position: fixed;
   top: 0;
@@ -28,27 +28,37 @@
 
 /* Individual Link Styling */
 .navbar-link {
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: bold;
   padding: 10px 15px;
+  color: #fff;
+  background:#FF0078 ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes gradient visible */
 }
 
 .navbar-link:hover {
-  color: #4e18fd;
+  background: linear-gradient(90deg, #fff4f9, #F6EFA7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline; /* Optional underline effect on hover */
 }
 
 /* Hamburger Menu Icon (Hidden on Desktop) */
 .navbar-menu-icon {
-  display: none;
+  display: none; /* Hidden by default on larger screens */
   cursor: pointer;
-  margin-right: 20px;  /* Add right margin for spacing */
+  margin-right: 20px; /* Add right margin for spacing */
+  color: #fff;
 }
 
+/* Menu Icon Styling */
 .menu-icon {
   width: 28px;
   height: 28px;
   transition: transform 0.3s ease;
+  color: #fff;
 }
 
 /* Rotate Animation */
@@ -58,7 +68,7 @@
 
 /* Book an Appointment Button */
 .navbar-button {
-  background-color: #4e18fd;
+  background:  #FF0078;
   color: white;
   padding: 12px 25px;
   border-radius: 50px;
@@ -66,27 +76,30 @@
   text-decoration: none;
   font-weight: bold;
   margin-left: 15px;
+  border: none; /* Remove border */
+  cursor: pointer;
+  
 }
 
 .navbar-button:hover {
-  background-color: #3b13c2;
+  filter: brightness(1.2); /* Brighten on hover */
 }
 
 /* Responsive Mobile Menu */
 @media (max-width: 768px) {
   .navbar-menu-icon {
-    display: block;  /* Show hamburger icon on mobile */
+    display: block; /* Show hamburger icon on mobile */
     color: white;
-    margin-right: 20px;  /* Keep the gap on mobile too */
+    margin-right: 20px; /* Keep the gap on mobile too */
   }
 
   .navbar-links {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #000;
+    background-color: #000; /* Black background remains */
     position: absolute;
-    top: 80px;  /* Add space below the navbar */
+    top: 80px; /* Add space below the navbar */
     left: 0;
     width: 100%;
     padding: 20px 0;
@@ -107,11 +120,14 @@
     padding: 12px 25px;
     width: 100%;
     text-align: left;
+    background: none; /* Reset background on mobile */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .navbar-button {
-    width: 50%;
-    margin-right: auto;
+    width: 80%; /* Full width on mobile */
+    margin: 10px auto;
     text-align: center;
   }
 }

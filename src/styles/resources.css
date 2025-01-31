@@ -11,7 +11,7 @@
   font-size: 36px;
   padding-top: 80px;
   font-weight: bold;
-  color: #333;
+  color: black;
   text-align: center;
   margin-bottom: 30px;
   font-family: 'LuckiestGuy', sans-serif;
@@ -47,7 +47,7 @@
 .content-container h2 {
   font-size: 28px;
   font-weight: bold;
-  color: #4e18fd;
+  color: #FF0078;
   margin-bottom: 15px;
 }
 
