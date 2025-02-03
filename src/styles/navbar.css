@@ -120,9 +120,10 @@
     padding: 12px 25px;
     width: 100%;
     text-align: left;
-    background: none; /* Reset background on mobile */
+  
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: white;
   }
 
   .navbar-button {
